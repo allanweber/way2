@@ -22,7 +22,7 @@ namespace Football.Tests.Facades
 
             var competitions = await facade.GetCompetitions();
 
-            Assert.True(competitions.ToList().Count > 0);
+            Assert.True(competitions.Any(), "Deveria retornar competições");
         }
 
         [Theory]
@@ -35,7 +35,7 @@ namespace Football.Tests.Facades
 
             var league = await facade.GetLeague(id);
 
-            Assert.True(league.Standing.Count > 0);
+            Assert.True(league.Standing.Any(), "Deveria retornar times");
         }
     }
 }

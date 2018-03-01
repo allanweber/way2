@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Football.Domain.Dtos
+﻿namespace Football.Domain.Dtos
 {
-    public class TeamDtandingDto
+    public class TeamStandingDto
     {
         public int Position { get; set; }
         public string TeamName { get; set; }
