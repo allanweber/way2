@@ -28,7 +28,7 @@ namespace Football.Api.Config
                 {
                     Title = "RH",
                     Version = "v1",
-                    Description = "RH App",
+                    Description = "Football App",
                     Contact = new Contact
                     {
                         Name = "Allan Cassiano Weber",
@@ -37,7 +37,7 @@ namespace Football.Api.Config
                 });
 
                 var basePath = AppContext.BaseDirectory;
-                var xmlPath = Path.Combine(basePath, "RH.xml");
+                var xmlPath = Path.Combine(basePath, "Football.xml");
                 s.IncludeXmlComments(xmlPath);
             });
 

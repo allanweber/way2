@@ -1,0 +1,24 @@
+<div *ngIf="teams">
+  <table class="table table-striped table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Posição</th>
+        <th scope="col">Time</th>
+        <th scope="col">Vitórias</th>
+        <th scope="col">Empates</th>
+        <th scope="col">Derrotas</th>
+        <th scope="col">Pontos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of teams">
+        <td>{{ team.position }} </td>
+        <td>{{ team.teamName }} </td>
+        <td>{{ team.wins }} </td>
+        <td>{{ team.draws }} </td>
+        <td>{{ team.losses }} </td>
+        <td>{{ team.points }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -18,7 +18,7 @@ namespace Football.Api.Config
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                    "RH");
+                    "Football");
             });
         }
     }

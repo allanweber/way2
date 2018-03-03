@@ -11,7 +11,11 @@ namespace Football.Infrastructure.Core
     {
         private readonly HttpClient client;
 
-        public BaseHttpClient(string baseAdrress, string path, string accept = "application/json")
+        public BaseHttpClient(
+            string baseAdrress,
+            string path,
+            List<KeyValuePair<string, string>> headers = null,
+            string accept = "application/json")
         {
             this.BaseAdrress = baseAdrress;
             this.Path = path;
@@ -21,6 +25,12 @@ namespace Football.Infrastructure.Core
             this.client.BaseAddress = new Uri(this.BaseAdrress);
             this.client.DefaultRequestHeaders.Accept.Clear();
             this.client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(this.Accept));
+
+            if (headers != null && headers.Count > 0)
+                headers.ForEach(header =>
+                {
+                    this.client.DefaultRequestHeaders.Add(header.Key, header.Value);
+                });
         }
 
         public string BaseAdrress { get; }

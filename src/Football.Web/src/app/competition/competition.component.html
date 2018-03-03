@@ -1,0 +1,24 @@
+<div class="card-body">
+
+  <div class="form-group row">
+    <label for="label-id" class="col-3">Competições</label>
+    <div class="col-9">
+      <select class="custom-select" (change)="onChange($event.target.value)">
+        <option selected>{{ !!competitions? 'Selecione...': 'Carregando...' }}</option>
+        <option *ngFor="let compt of competitions" [value]="compt.id" [selected]="compt.id == 444">
+          {{compt.id}} - {{compt.caption}}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="card">
+    <h5 class="card-header">
+      Times
+    </h5>
+    <div class="card-body">
+      <app-league-table *ngIf="competitions" [competition]="competitionId"></app-league-table>
+    </div>
+  </div>
+
+</div>

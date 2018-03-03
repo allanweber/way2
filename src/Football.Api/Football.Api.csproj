@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netcoreapp2.0\RH.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp2.0\Football.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
