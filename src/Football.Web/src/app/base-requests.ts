@@ -28,7 +28,7 @@ export class BaseRequests {
     swal({
       type: 'error',
       title: 'Ocorreu um erro',
-      text: 'errorObj.Message',
+      text: errorObj.Message,
     });
 
     return Observable.throw(error);
