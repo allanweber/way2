@@ -11,11 +11,17 @@ using Xunit;
 
 namespace Football.Tests.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class CompetitionControllerTest
     {
         private readonly TestServer server;
         private readonly HttpClient client;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public CompetitionControllerTest()
         {
             ServiceCollectionExtensions.UseStaticRegistration = false;
@@ -23,6 +29,10 @@ namespace Football.Tests.Controllers
             client = server.CreateClient();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task GetCompetitionsTest()
         {

@@ -4,8 +4,15 @@ using Microsoft.AspNetCore.Builder;
 
 namespace Football.Api.Config
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class ConfigureApp
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="app"></param>
         public static void ConfigureAppBuilder(this IApplicationBuilder app)
         {
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));

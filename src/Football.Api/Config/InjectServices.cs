@@ -11,8 +11,15 @@ using System.IO;
 
 namespace Football.Api.Config
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class InjectServices
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
         public static void InjectDepedencies(this IServiceCollection services)
         {
             services.AddMvc();
@@ -49,6 +56,10 @@ namespace Football.Api.Config
             }));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
         public static void InjectAppDepedencies(this IServiceCollection services)
         {
             services.AddScoped<FootballFacadeService>();

@@ -11,11 +11,17 @@ using Xunit;
 
 namespace Football.Tests.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class LeagueTableControllerTests
     {
         private readonly TestServer server;
         private readonly HttpClient client;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public LeagueTableControllerTests()
         {
             ServiceCollectionExtensions.UseStaticRegistration = false;
@@ -23,6 +29,11 @@ namespace Football.Tests.Controllers
             client = server.CreateClient();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="competitionId"></param>
+        /// <returns></returns>
         [Theory]
         [InlineData(444)]
         [InlineData(447)]

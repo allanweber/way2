@@ -1,20 +1,27 @@
 ﻿using Football.Infrastructure.Services.Facades;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Football.Tests.Facades
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class FootballFacadeServiceTest
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public FootballFacadeServiceTest()
         {
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task TestGetCompetitions()
         {
@@ -25,6 +32,11 @@ namespace Football.Tests.Facades
             Assert.True(competitions.Any(), "Deveria retornar competições");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Theory]
         [InlineData(444)]
         [InlineData(447)]

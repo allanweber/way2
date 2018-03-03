@@ -9,8 +9,14 @@ using Xunit;
 
 namespace Football.Tests.Services
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class CompetitionServiceTest
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public CompetitionServiceTest()
         {
             ServiceCollectionExtensions.UseStaticRegistration = false;
@@ -19,8 +25,12 @@ namespace Football.Tests.Services
             this.CompetitionService = server.Host.Services.GetService<ICompetitionService>();
         }
 
-        public ICompetitionService CompetitionService { get; }
+        private ICompetitionService CompetitionService { get; }
 
+        /// <summary>
+        /// /
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task GetCompetitionsTest()
         {

@@ -9,8 +9,14 @@ using Xunit;
 
 namespace Football.Tests.Services
 {
+    /// <summary>
+    /// 
+    /// </summary>
    public class LeagueTableServiceTests
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public LeagueTableServiceTests()
         {
             ServiceCollectionExtensions.UseStaticRegistration = false;
@@ -19,8 +25,16 @@ namespace Football.Tests.Services
             this.LeagueTableService = server.Host.Services.GetService<ILeagueTableService>();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ILeagueTableService  LeagueTableService { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="competitionId"></param>
+        /// <returns></returns>
         [Theory]
         [InlineData(444)]
         [InlineData(447)]
